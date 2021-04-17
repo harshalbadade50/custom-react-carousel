@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,100 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  height: 260px;
+  margin-top: 10%;
+}
+.carousel{
+  position: relative;
+  width: 70%;
+  /* border: 1px solid #c7c3c3; */
+  /* box-shadow: 10px 10px 5px grey; */
+}
+.left-arrow-icon, .right-arrow-icon{
+  position: absolute;
+  height: 20px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 28px;
+  width: 30px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.left-arrow-icon{
+  left: 5px;
+}
+.right-arrow-icon{
+  right: 5px;
+}
+.carousel-section{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 100%;
+  align-items: center;
+}
+.carousel-img-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prev-img, .next-img{
+  flex-basis: 31%;
+  height: 77%;
+  box-sizing: border-box;
+}
+.selected-img{
+  box-shadow: 3px 2px 7px grey;
+  flex-basis: 37%;
+}
+
+.img-section{
+  max-width: 100%;
+  height: 155px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+
+  transition-property: background-image;
+  animation-name: move;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.1s;
+}
+
+h3{
+  margin: 5px;
+}
+.product-name, .product-category{
+  font-size: 13px;
+  font-family: sans-serif;
+}
+.product-price{
+  font-size: 15px;
+  font-family: sans-serif;
+}
+.product-name{
+  margin-top: 5px;
+}
+.product-category{
+  margin-bottom: 5px;
+}
+.arrow-disabled{
+  background: #b9b9b9;
+  cursor: not-allowed;
 }
