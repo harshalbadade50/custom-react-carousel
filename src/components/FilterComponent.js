@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 export default function FilterComponent(props) {
 
     const classes = useStyles();
-    let [categoryValue, setCategory] = useState("select");
+    let [categoryValue, setCategory] = useState("All");
 
     const handleChange = (event) => {
         props.setCategory(event.target.value);
@@ -29,16 +29,18 @@ export default function FilterComponent(props) {
     return(
         <div className="filter-section">
             <FormControl className={classes.formControl}>
-                <InputLabel id="demo-simple-select-label">Category</InputLabel>
+                <InputLabel id="demo-simple-select-label" style={{color: "white"}}>Category</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={categoryValue}
                     onChange={handleChange}
+                    style={{color: "white"}}
                 >
-                    <MenuItem value={"select"}>--Select--</MenuItem>
+                    <MenuItem value={"All"}>All</MenuItem>
                     <MenuItem value={"Mens Wear"}>Mens Wear</MenuItem>
                     <MenuItem value={"Womens Wear"}>Womens Wear</MenuItem>
+                    <MenuItem value={"Kids Wear"}>Kids Wear</MenuItem>
                     {/* <MenuItem value={"cat3"}>cat3</MenuItem> */}
                 </Select>
             </FormControl>

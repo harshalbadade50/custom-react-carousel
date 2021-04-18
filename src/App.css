@@ -33,11 +33,14 @@
   }
 }
 
+header{
+  height: 70px;
+}
+
 .container{
   display: flex;
   justify-content: center;
   height: 260px;
-  margin-top: 10%;
 }
 .carousel{
   position: relative;
